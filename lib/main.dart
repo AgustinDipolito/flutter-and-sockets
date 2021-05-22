@@ -18,7 +18,7 @@ class Myapp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "MAterial app",
+        title: "Vote now!",
         initialRoute: "home",
         routes: {
           "home": (_) => HomePage(),

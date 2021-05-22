@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: const EdgeInsets.only(left: 8),
           child: Align(
-            alignment: Alignment.center,
+            alignment: Alignment.centerLeft,
             child: Text(
               "Remove band",
               style: TextStyle(color: Colors.white, fontSize: 15),
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
           child: Text(
             banda.name.substring(0, 2),
           ),
-          backgroundColor: Colors.blue[100],
+          backgroundColor: Colors.blue[500],
         ),
         title: Text(banda.name),
         trailing: Text(
@@ -170,13 +170,21 @@ class _HomePageState extends State<HomePage> {
     return Container(
       height: 200,
       width: double.infinity,
-      child: PieChart(
-        dataMap: dataMap,
-        colorList: colorList,
-        chartValuesOptions: ChartValuesOptions(
-          showChartValuesOutside: true,
-        ),
-      ),
+      child: dataMap != null && dataMap.isNotEmpty
+          ? PieChart(
+              dataMap: dataMap,
+              colorList: colorList,
+              chartValuesOptions: ChartValuesOptions(
+                showChartValuesOutside: true,
+              ),
+            )
+          : Text(
+              "Add a new band !",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+      margin: EdgeInsets.only(left: 10),
     );
   }
 }
