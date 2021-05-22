@@ -18,9 +18,8 @@ class SocketServices with ChangeNotifier {
   }
 
   void _initConfig() {
-//192.168.0.168
     this._socket = IO.io(
-      'http://192.168.0.168:3005',
+      'https://socket-node-server-flutter.herokuapp.com/',
       IO.OptionBuilder()
           .setTransports(["websocket"])
           .enableAutoConnect()
