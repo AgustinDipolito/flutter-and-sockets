@@ -9,7 +9,7 @@
 
 - Server load on Heroku (Restart every 30mins without activity).
 
-- List of bands, votes and real time graph.
+- List of bands, votes and graph in real time.
 - Client and Server could add new bands.
 - Client and Server could delete.
 
